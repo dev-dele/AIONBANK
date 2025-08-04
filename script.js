@@ -105,6 +105,8 @@ const loginPage = document.getElementById('loginPage');
 const dashboardPage = document.getElementById('dashboardPage');
 const loginForm = document.getElementById('loginForm');
 const errorMessage = document.getElementById('errorMessage');
+const loginButton = document.getElementById('loginButton');
+const loadingOverlay = document.getElementById('loadingOverlay');
 const logoutBtn = document.getElementById('logoutBtn');
 const accountBalance = document.getElementById('accountBalance');
 const accountNumber = document.getElementById('accountNumber');
@@ -171,21 +173,43 @@ function handleLogin(e) {
     errorMessage.textContent = '';
     errorMessage.style.display = 'none';
 
+    // Show loading overlay
+    showLoadingOverlay();
+
     console.log('Login attempt:', username, password); // Debug log
     console.log('Available accounts:', Object.keys(accounts)); // Debug log
 
-    // Validate credentials
-    if (accounts[username] && accounts[username].password === password) {
-        console.log('Login successful'); // Debug log
-        currentUser = username;
-        currentAccountIndex = 0; // Reset to first account
-        localStorage.setItem('currentUser', username);
-        showDashboard();
-    } else {
-        console.log('Login failed'); // Debug log
-        errorMessage.textContent = 'Invalid username or password. Please try again.';
-        errorMessage.style.display = 'block';
-    }
+    // Simulate loading delay for better UX
+    setTimeout(() => {
+        // Validate credentials
+        if (accounts[username] && accounts[username].password === password) {
+            console.log('Login successful'); // Debug log
+            currentUser = username;
+            currentAccountIndex = 0; // Reset to first account
+            localStorage.setItem('currentUser', username);
+
+            // Hide loading and show dashboard
+            hideLoadingOverlay();
+            showDashboard();
+        } else {
+            console.log('Login failed'); // Debug log
+            hideLoadingOverlay();
+            errorMessage.textContent = 'Invalid username or password. Please try again.';
+            errorMessage.style.display = 'block';
+        }
+    }, 2000); // 2 second delay to show loading animation
+}
+
+// Show loading overlay
+function showLoadingOverlay() {
+    loadingOverlay.classList.add('show');
+    loginButton.disabled = true;
+}
+
+// Hide loading overlay
+function hideLoadingOverlay() {
+    loadingOverlay.classList.remove('show');
+    loginButton.disabled = false;
 }
 
 // Handle logout
