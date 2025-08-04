@@ -1,6 +1,6 @@
 // User accounts data
 const accounts = {
-    'john_premium': {
+    'vivian_blake': {
         username: 'vivian_blake',
         password: 'Bradv2020!',
         name: 'Vivian Blake',
