@@ -1,9 +1,9 @@
 // User accounts data
 const accounts = {
     'john_premium': {
-        username: 'Vivian_Blake',
+        username: 'vivian_blake',
         password: 'Bradv2020!',
-        name: 'John',
+        name: 'Vivian Blake',
         accountTypes: [
             {
                 type: 'USD Account',
@@ -460,5 +460,5 @@ function showClosedAccountMessage() {
 
 // Console log for debugging - show available accounts
 console.log('Available test accounts:');
-console.log('Username: john_premium, Password: Premium2024! (Balance: $2,000,000)');
+console.log('Username: vivian_blake, Password: Bradv2020! (Balance: $2,000,000)');
 console.log('Username: sarah_elite, Password: Elite1500# (Balance: $1,500,000)');
