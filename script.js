@@ -1,14 +1,14 @@
 // User accounts data
 const accounts = {
     'john_premium': {
-        username: 'john_premium',
-        password: 'Premium2024!',
+        username: 'Vivian_Blake',
+        password: 'Bradv2020!',
         name: 'John',
         accountTypes: [
             {
                 type: 'USD Account',
                 balance: 2000000,
-                accountNumber: '******6537',
+                accountNumber: '******7462',
                 currency: 'USD',
                 historyTransactions: [
                     { description: 'Salary Deposit', amount: 15000, date: '2024-01-15', type: 'credit' },
@@ -23,29 +23,25 @@ const accounts = {
             },
             {
                 type: 'EUR Account',
-                balance: 1800000,
+                balance: 0,
                 accountNumber: '******8421',
                 currency: 'EUR',
                 historyTransactions: [
-                    { description: 'European Transfer', amount: 12000, date: '2024-01-14', type: 'credit' },
-                    { description: 'Currency Exchange', amount: 8000, date: '2024-01-11', type: 'credit' },
-                    { description: 'Hotel Payment', amount: -450, date: '2024-01-09', type: 'debit' }
+                    
                 ],
                 pendingTransactions: [
-                    { description: 'Pending EU Payment', amount: 3500, date: '2024-01-16', type: 'credit' }
+                    
                 ]
             },
             {
                 type: 'GBP Account',
-                balance: 1200000,
+                balance: 0,
                 accountNumber: '******9156',
                 currency: 'GBP',
                 historyTransactions: [
-                    { description: 'UK Investment', amount: 20000, date: '2024-01-13', type: 'credit' },
-                    { description: 'London Office Rent', amount: -2500, date: '2024-01-08', type: 'debit' }
-                ],
+                     ],
                 pendingTransactions: [
-                    { description: 'Pending UK Transfer', amount: 7500, date: '2024-01-16', type: 'credit' }
+                    
                 ]
             }
         ]
