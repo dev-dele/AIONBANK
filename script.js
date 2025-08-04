@@ -7,7 +7,7 @@ const accounts = {
         accountTypes: [
             {
                 type: 'USD Account',
-                balance: 1,706,040.56,
+                balance: 1706040,
                 accountNumber: '******7462',
                 currency: 'USD',
                 historyTransactions: [
