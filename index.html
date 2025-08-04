@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aion Bank - Secure Banking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <div class="login-container">
+            <div class="login-header">
+                <img src="logo.png" alt="Aion Bank" class="logo-image">
+            </div>
+
+            <div class="card-container">
+                <div class="bank-card">
+                    <img src="card.png" alt="Bank Card" class="card-image">
+                </div>
+
+                <div class="tagline">
+                    <p>Full-service, all-inclusive, digital banking.</p>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+
+                    <button type="submit" class="login-btn">Login</button>
+
+                    <div id="errorMessage" class="error-message"></div>
+
+                    <a href="#" class="reset-link">Reset Password</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="page">
+        <div class="container">
+            <!-- Header with Account Info -->
+            <header class="dashboard-header">
+                <div class="header-top">
+                    <div class="user-greeting">
+                        <span id="userGreeting">Hello, User</span>
+                    </div>
+                    <div class="header-right">
+                        <button id="logoutBtn" class="logout-btn">Logout</button>
+                        <div class="profile-icon"></div>
+                    </div>
+                </div>
+
+                <div class="account-info" id="accountInfo">
+                    <h2 id="accountType">USD Account</h2>
+                    <p class="account-number" id="accountNumber">******6537</p>
+                    <div class="balance-display">
+                        <span class="balance-amount" id="accountBalance">840</span>
+                        <span class="currency" id="currencyDisplay">USD</span>
+                    </div>
+                    <p class="balance-label">Available Balance</p>
+                </div>
+
+                <div class="account-indicators">
+                    <span class="indicator active" data-account="0"></span>
+                    <span class="indicator" data-account="1"></span>
+                    <span class="indicator" data-account="2"></span>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- Quick Actions -->
+                <section class="quick-actions">
+                    <div class="action-grid">
+                        <button class="action-btn">
+                            <div class="btn-icon send-money-icon"></div>
+                            <span>Send Money</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="btn-icon deposit-icon"></div>
+                            <span>Deposit</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="btn-icon bills-icon"></div>
+                            <span>Bills</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="btn-icon cards-icon"></div>
+                            <span>Cards</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="btn-icon exchange-icon"></div>
+                            <span>Exchange</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="btn-icon statements-icon"></div>
+                            <span>Statements</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="btn-icon payments-icon"></div>
+                            <span>Payments</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="btn-icon history-icon"></div>
+                            <span>History</span>
+                        </button>
+                        <button class="action-btn">
+                            <div class="btn-icon credit-icon"></div>
+                            <span>Credit Account</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Transaction Tabs -->
+                <section class="transaction-tabs-section">
+                    <div class="section-header">
+                        <h3>SHOW MORE</h3>
+                    </div>
+
+                    <div class="tab-navigation">
+                        <button class="tab-btn active" data-tab="history">History</button>
+                        <button class="tab-btn" data-tab="pending">Pending</button>
+                    </div>
+
+                    <!-- History Tab Content -->
+                    <div class="tab-content active" id="historyTab">
+                        <div class="transaction-list" id="historyTransactionList">
+                            <!-- History transactions will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Pending Tab Content -->
+                    <div class="tab-content" id="pendingTab">
+                        <div class="transaction-list" id="pendingTransactionList">
+                            <!-- Pending transactions will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for closed account message -->
+    <div id="closedAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Account Closed</h3>
+            <p>THIS ACCOUNT HAS BEEN CLOSED CONTACT SUPPORT FOR MORE DETAILS ON HOW TO WITHDRAW YOUR FUNDS</p>
+            <button class="modal-btn">Contact Support</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
